@@ -1,0 +1,31 @@
+{
+  "name": "is-even",
+  "version": "0.0.0",
+  "napi": {
+    "name": "is-even",
+    "triples": {}
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@node-rs/helper": "^1.1.0",
+    "bema": "^0.1.2",
+    "benchmark": "^2.1.4",
+    "is-odd": "^3.0.1",
+    "mocha": "^9.0.1"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^1.1.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "mocha js",
+    "bench": "node ./js/bench.js",
+    "version": "napi version"
+  }
+}
